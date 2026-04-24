@@ -14,10 +14,10 @@
             <img src="assets/grace_pot_official_logo.png" alt="Grace Pot Caribbean">
         </a>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Menu</a>
-            <a href="#">Our Story</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#story">Our Story</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="nav-right">
             <a href="#" class="cart-btn">
@@ -29,7 +29,7 @@
 
     <main id="fullpage">
         <!-- Hero Section -->
-        <section class="section hero bg-yellow">
+        <section id="home" class="section hero bg-yellow">
             <!-- Floating elements -->
             <img src="assets/patties.png" alt="Floating Patty" class="floating-img f-1">
             <img src="assets/jerk.png" alt="Floating Jerk" class="floating-img f-2">
@@ -80,7 +80,7 @@
         </section>
 
         <!-- Belief Section -->
-        <section class="section belief bg-green">
+        <section id="story" class="section belief bg-green">
             <div class="container">
                 <div class="belief-plates">
                     <img src="assets/curry.png" alt="Curry">
@@ -92,7 +92,7 @@
         </section>
 
         <!-- Menu Section -->
-        <section class="section menu-section bg-cream">
+        <section id="menu" class="section menu-section bg-cream">
             <div class="container">
                 <div class="menu-header">
                     <h2>Menu</h2>
@@ -417,8 +417,11 @@
             </div>
         </section>
         <!-- Contact Section -->
-        <section class="section contact-section bg-green">
+        <section id="contact" class="section contact-section bg-green">
             <div class="container">
+                <div class="menu-header" style="margin-bottom: 40px;">
+                    <h2 style="color: white;">Contact <span class="highlight">Us</span></h2>
+                </div>
                 <div class="contact-card reveal">
                     <div class="contact-left">
                         <h2>Visit, Call or Order from <span class="highlight">Grace Pot.</span></h2>
@@ -479,7 +482,8 @@
                 autoScrolling: true,
                 scrollHorizontally: false,
                 navigation: true,
-                navigationPosition: 'right'
+                navigationPosition: 'right',
+                anchors: ['home', 'story', 'menu', 'vibe', 'feedback', 'contact']
             });
 
             // Menu filtering logic
