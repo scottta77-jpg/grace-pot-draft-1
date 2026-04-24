@@ -15,8 +15,8 @@
         </a>
         <div class="nav-links">
             <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
             <a href="#story">Our Story</a>
+            <a href="#menu">Menu</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="nav-right">
@@ -24,6 +24,11 @@
                 <i data-lucide="shopping-cart" style="width: 20px;"></i>
                 <div class="cart-badge">0</div>
             </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -482,8 +487,10 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             new fullpage('#fullpage', {
+                licenseKey: 'gplv3-license',
                 scrollingSpeed: 1000,
                 autoScrolling: true,
+                fitToSection: true,
                 scrollHorizontally: false,
                 navigation: true,
                 navigationPosition: 'right',
@@ -494,7 +501,14 @@
                 loopTop: false,
                 continuousVertical: false,
                 animateAnchor: true,
-                recordHistory: true
+                recordHistory: true,
+                afterRender: function() {
+                    // Remove any fullPage.js watermark or injected elements
+                    var watermark = document.querySelector('.fp-watermark');
+                    if (watermark) watermark.remove();
+                    var warning = document.querySelector('.fp-warning');
+                    if (warning) warning.remove();
+                }
             });
 
             // Menu filtering logic
@@ -553,6 +567,23 @@
                     filterMenu(category);
                 });
             });
+
+            // Mobile hamburger menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if (menuToggle && navLinks) {
+                menuToggle.addEventListener('click', function() {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('mobile-open');
+                });
+                // Close menu when a nav link is clicked
+                navLinks.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        menuToggle.classList.remove('active');
+                        navLinks.classList.remove('mobile-open');
+                    });
+                });
+            }
         });
     </script>
 </body>
