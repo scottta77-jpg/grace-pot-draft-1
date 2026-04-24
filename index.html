@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace Pot Caribbean | Authentic Caribbean Takeaway</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -30,9 +31,9 @@
         </div>
     </nav>
 
-    <main>
+    <main id="fullpage">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="section hero">
             <!-- Floating elements -->
             <img src="assets/patties.png" alt="Floating Patty" class="floating-img f-1">
             <img src="assets/jerk.png" alt="Floating Jerk" class="floating-img f-2">
@@ -87,7 +88,7 @@
         </section>
 
         <!-- Belief Section -->
-        <section class="belief">
+        <section class="section belief">
             <div class="container">
                 <div class="belief-plates">
                     <img src="assets/curry.png" alt="Curry">
@@ -99,7 +100,7 @@
         </section>
 
         <!-- Menu Section -->
-        <section class="menu-section">
+        <section class="section menu-section">
             <div class="container">
                 <div class="menu-header">
                     <div class="pill">
@@ -169,7 +170,7 @@
         </section>
 
         <!-- Vibe Section -->
-        <section class="vibe-section">
+        <section class="section vibe-section">
             <div class="container">
                 <div class="vibe-grid">
                     <div class="vibe-left">
@@ -209,7 +210,7 @@
         </section>
 
         <!-- Feedback Section -->
-        <section class="feedback-section">
+        <section class="section feedback-section">
             <div class="container">
                 <div class="menu-header">
                     <div class="pill">
@@ -243,9 +244,8 @@
                 </div>
             </div>
         </section>
-    </main>
-
-    <footer>
+        <!-- Footer -->
+        <footer class="section">
         <div class="footer-top container">
             <img src="assets/hero.png" alt="Plate" class="footer-plate">
             <div class="footer-grid">
@@ -282,11 +282,23 @@
             </div>
         </div>
     </footer>
+    </main>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
 
     <script>
         lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new fullpage('#fullpage', {
+                scrollingSpeed: 1000,
+                autoScrolling: true,
+                scrollHorizontally: false,
+                navigation: true,
+                navigationPosition: 'right'
+            });
+        });
     </script>
 </body>
 </html>

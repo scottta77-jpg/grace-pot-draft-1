@@ -32,15 +32,8 @@ body {
     padding: 0 20px;
 }
 
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
 section {
     min-height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
     justify-content: center;
