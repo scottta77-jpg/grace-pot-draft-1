@@ -35,7 +35,7 @@ body {
 .bg-yellow { 
     background-color: var(--bg-yellow); 
     color: var(--text-dark); 
-    background-image: linear-gradient(rgba(254, 209, 0, 0.85), rgba(254, 209, 0, 0.85)), url('assets/bg_scotch_bonnets.png');
+    background-image: linear-gradient(rgba(254, 209, 0, 0.96), rgba(254, 209, 0, 0.96)), url('assets/bg_scotch_bonnets.png');
     background-size: cover;
     background-position: center;
 }
@@ -45,7 +45,7 @@ body {
 .bg-green { 
     background-color: var(--bg-vibrant-green); 
     color: var(--text-light); 
-    background-image: linear-gradient(rgba(0, 155, 58, 0.85), rgba(0, 155, 58, 0.85)), url('assets/bg_tropical_leaves.png');
+    background-image: linear-gradient(rgba(0, 155, 58, 0.92), rgba(0, 155, 58, 0.92)), url('assets/bg_tropical_leaves.png');
     background-size: cover;
     background-position: center;
 }
@@ -55,7 +55,7 @@ body {
 .bg-cream { 
     background-color: var(--bg-cream); 
     color: var(--text-dark); 
-    background-image: linear-gradient(rgba(253, 251, 247, 0.85), rgba(253, 251, 247, 0.85)), url('assets/bg_sand_shadows.png');
+    background-image: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.92)), url('assets/bg_sand_shadows.png');
     background-size: cover;
     background-position: center;
 }
@@ -65,12 +65,22 @@ body {
 .bg-black { 
     background-color: var(--bg-black); 
     color: var(--text-light); 
-    background-image: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.85)), url('assets/bg_ocean_palm.png');
+    background-image: linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)), url('assets/bg_ocean_palm.png');
     background-size: cover;
     background-position: center;
 }
 .bg-black .text-muted { color: var(--text-muted-light); }
 .bg-black .border-element { border-color: var(--border-light); }
+
+.bg-testimonial { 
+    background-color: var(--bg-cream); 
+    color: var(--text-dark); 
+    background-image: linear-gradient(rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0.92)), url('assets/bg_testimonial.png');
+    background-size: cover;
+    background-position: center;
+}
+.bg-testimonial .text-muted { color: var(--text-muted-dark); }
+.bg-testimonial .border-element { border-color: var(--border-dark); }
 
 .bg-dark-green { background-color: var(--bg-dark-green); color: var(--text-light); }
 .bg-dark-green .text-muted { color: var(--text-muted-light); }
