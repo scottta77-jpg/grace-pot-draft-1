@@ -342,7 +342,7 @@
         </section>
 
         <!-- Vibe Section -->
-        <section class="section vibe-section bg-black">
+        <section id="vibe" class="section vibe-section bg-black">
             <div class="container">
                 <div class="vibe-grid">
                     <div class="vibe-left">
@@ -382,7 +382,7 @@
         </section>
 
         <!-- Feedback Section -->
-        <section class="section feedback-section bg-testimonial">
+        <section id="feedback" class="section feedback-section bg-testimonial">
             <div class="container">
                 <div class="menu-header">
                     <h2>Honest <span class="highlight">Feedback</span><br>From Valued Customers</h2>
@@ -466,8 +466,6 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
     <script src="script.js"></script>
@@ -484,7 +482,8 @@
                 navigation: true,
                 navigationPosition: 'right',
                 anchors: ['home', 'story', 'menu', 'vibe', 'feedback', 'contact'],
-                menu: '.nav-links'
+                menu: '.nav-links',
+                sectionSelector: '.section'
             });
 
             // Menu filtering logic
