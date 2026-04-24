@@ -452,14 +452,15 @@ nav {
 .contact-icon {
     width: 50px;
     height: 50px;
-    background: rgba(0, 155, 58, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-green);
     flex-shrink: 0;
 }
+.icon-green { background: rgba(0, 155, 58, 0.1); color: #009b3a; }
+.icon-red { background: rgba(235, 59, 90, 0.1); color: #eb3b5a; }
+.icon-yellow { background: rgba(254, 209, 0, 0.15); color: #d4ae00; }
 .contact-icon i { width: 22px; height: 22px; }
 .contact-text h3 {
     font-size: 1.1rem;
