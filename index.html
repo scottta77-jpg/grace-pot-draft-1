@@ -110,15 +110,15 @@
                 </div>
                 
                 <div class="menu-categories">
-                    <button class="category-btn active">ALL</button>
-                    <button class="category-btn">MAINS</button>
-                    <button class="category-btn">SIDES</button>
-                    <button class="category-btn">PATTIES</button>
-                    <button class="category-btn">DRINKS</button>
+                    <button class="category-btn active" data-category="all">ALL</button>
+                    <button class="category-btn" data-category="mains">MAINS</button>
+                    <button class="category-btn" data-category="sides">SIDES</button>
+                    <button class="category-btn" data-category="patties">PATTIES</button>
+                    <button class="category-btn" data-category="drinks">DRINKS</button>
                 </div>
                 
-                <div class="grid-2">
-                    <div class="menu-item-text">
+                <div class="grid-2 menu-grid">
+                    <div class="menu-item-text" data-category="mains">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">Smoky Jerk Chicken</h3>
                             <span class="menu-item-price">£14.00</span>
@@ -126,7 +126,7 @@
                         <p class="menu-item-desc">Juicy, spice-rubbed chicken grilled to perfection with our signature jerk sauce.</p>
                     </div>
                     
-                    <div class="menu-item-text">
+                    <div class="menu-item-text" data-category="mains">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">Slow-Cooked Curry Goat</h3>
                             <span class="menu-item-price">£16.50</span>
@@ -134,7 +134,7 @@
                         <p class="menu-item-desc">Tender pieces of goat meat slow-cooked in a rich, aromatic Caribbean curry sauce.</p>
                     </div>
                     
-                    <div class="menu-item-text">
+                    <div class="menu-item-text" data-category="mains">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">Brown Stew Chicken</h3>
                             <span class="menu-item-price">£13.50</span>
@@ -142,7 +142,7 @@
                         <p class="menu-item-desc">Chicken pieces braised in a rich, dark gravy with carrots and onions.</p>
                     </div>
                     
-                    <div class="menu-item-text">
+                    <div class="menu-item-text" data-category="patties">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">Signature Beef Patties</h3>
                             <span class="menu-item-price">£3.50</span>
@@ -150,20 +150,44 @@
                         <p class="menu-item-desc">Flaky, golden pastry filled with seasoned ground beef. A Caribbean classic.</p>
                     </div>
                     
-                    <div class="menu-item-text">
+                    <div class="menu-item-text" data-category="mains">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">Ackee & Saltfish</h3>
                             <span class="menu-item-price">£15.00</span>
                         </div>
                         <p class="menu-item-desc">Jamaica's national dish. Sautéed ackee with salted cod, peppers, and onions.</p>
                     </div>
-                    
-                    <div class="menu-item-text">
+
+                    <div class="menu-item-text" data-category="sides">
                         <div class="menu-item-header">
-                            <h3 class="menu-item-title">Grace Mix Meal</h3>
-                            <span class="menu-item-price">£18.00</span>
+                            <h3 class="menu-item-title">Rice & Peas</h3>
+                            <span class="menu-item-price">£4.50</span>
                         </div>
-                        <p class="menu-item-desc">Your choice of main served with large rice & peas, plantain, and coleslaw.</p>
+                        <p class="menu-item-desc">Traditional Caribbean rice cooked with coconut milk and kidney beans.</p>
+                    </div>
+
+                    <div class="menu-item-text" data-category="sides">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Fried Plantain</h3>
+                            <span class="menu-item-price">£3.00</span>
+                        </div>
+                        <p class="menu-item-desc">Sweet, ripe plantain slices fried until golden and caramelized.</p>
+                    </div>
+
+                    <div class="menu-item-text" data-category="drinks">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Tropical Punch</h3>
+                            <span class="menu-item-price">£3.50</span>
+                        </div>
+                        <p class="menu-item-desc">A refreshing blend of exotic island fruits. Best served chilled.</p>
+                    </div>
+
+                    <div class="menu-item-text" data-category="drinks">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-title">Ginger Beer</h3>
+                            <span class="menu-item-price">£3.00</span>
+                        </div>
+                        <p class="menu-item-desc">Fiery and refreshing traditional Caribbean ginger beer.</p>
                     </div>
                 </div>
             </div>
@@ -297,6 +321,30 @@
                 scrollHorizontally: false,
                 navigation: true,
                 navigationPosition: 'right'
+            });
+
+            // Menu filtering logic
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const menuItems = document.querySelectorAll('.menu-item-text');
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Filter items
+                    const category = button.getAttribute('data-category');
+                    menuItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                            item.style.opacity = '1';
+                        } else {
+                            item.style.display = 'none';
+                            item.style.opacity = '0';
+                        }
+                    });
+                });
             });
         });
     </script>
