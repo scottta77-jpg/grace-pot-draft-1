@@ -139,7 +139,7 @@ h1, h2, h3, h4 { font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
 .btn-secondary:hover { background: var(--primary-red); color: white; border-color: var(--primary-red); transform: translateY(-2px); }
 
 .logo img { 
-    height: 60px; 
+    height: 80px; 
     filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5));
 }
 
