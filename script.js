@@ -6,12 +6,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Navbar: shrink on scroll ──────────────────────────────
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
+        const isMobile = window.innerWidth <= 768;
         if (window.scrollY > 50) {
             nav.style.background = 'rgba(0, 0, 0, 0.95)';
-            nav.style.padding = '0.5rem 60px';
+            nav.style.padding = isMobile ? '10px 20px' : '0.5rem 60px';
         } else {
             nav.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 100%)';
-            nav.style.padding = '30px 60px';
+            nav.style.padding = isMobile ? '15px 20px' : '30px 60px';
         }
     }, { passive: true });
 
