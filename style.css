@@ -410,6 +410,97 @@ nav {
     height: 24px;
 }
 
+/* Contact Section */
+.contact-section { padding-bottom: 0; }
+.contact-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+    min-height: 500px;
+}
+.contact-left {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-left h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    color: var(--bg-dark-green);
+}
+.contact-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 155, 58, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-green);
+    flex-shrink: 0;
+}
+.contact-icon i { width: 22px; height: 22px; }
+.contact-text h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--bg-dark-green);
+}
+.contact-text p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+.contact-email {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-right {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+.contact-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.directions-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: #ffffff;
+    color: var(--bg-dark-green);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.directions-btn:hover {
+    transform: translateY(-5px);
+    background: var(--bg-vibrant-green);
+    color: #ffffff;
+}
+
 /* Footer Section */
 footer.section .fp-tableCell,
 footer.section .fp-overflow {
