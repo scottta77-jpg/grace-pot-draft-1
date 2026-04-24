@@ -487,19 +487,45 @@
             const menuItems = document.querySelectorAll('.menu-item-text');
 
             function filterMenu(category) {
+                // Fade out current items
                 menuItems.forEach(item => {
-                    if (category === 'all' || item.getAttribute('data-category') === category) {
-                        item.style.display = 'block';
-                        setTimeout(() => item.style.opacity = '1', 10);
-                    } else {
-                        item.style.opacity = '0';
-                        setTimeout(() => item.style.display = 'none', 300);
-                    }
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
                 });
+
+                setTimeout(() => {
+                    // Switch visibility
+                    menuItems.forEach(item => {
+                        if (item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Trigger fade in
+                    setTimeout(() => {
+                        menuItems.forEach(item => {
+                            if (item.style.display === 'block') {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }
+                        });
+                    }, 50);
+                }, 300);
             }
 
-            // Initial filter
-            filterMenu('grace-meals');
+            // Initial filter - no delay for first load
+            menuItems.forEach(item => {
+                if (item.getAttribute('data-category') === 'grace-meals') {
+                    item.style.display = 'block';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                } else {
+                    item.style.display = 'none';
+                    item.style.opacity = '0';
+                }
+            });
 
             categoryButtons.forEach(button => {
                 button.addEventListener('click', () => {

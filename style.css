@@ -266,18 +266,28 @@ nav {
 /* Text Menu Grid */
 .menu-header { text-align: center; margin-bottom: 40px; }
 .menu-header h2 { font-size: 3rem; }
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    min-height: 550px; /* Locked height to prevent jumps */
+    align-content: start;
+}
 
 .menu-item-text {
     padding: 25px;
     border-radius: 16px;
     background: rgba(128, 128, 128, 0.05);
     border: 1px solid rgba(128, 128, 128, 0.15);
-    transition: var(--transition);
+    transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    display: none;
 }
+
 .menu-item-text:hover {
     background: rgba(128, 128, 128, 0.1);
-    border-color: rgba(128, 128, 128, 0.3);
+    border-color: var(--primary-red);
 }
 .menu-item-header {
     display: flex;
