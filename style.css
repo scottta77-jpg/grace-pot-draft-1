@@ -82,15 +82,15 @@ body {
 .bg-testimonial .text-muted { color: var(--text-muted-dark); }
 .bg-testimonial .border-element { border-color: var(--border-dark); }
 
-.bg-light-blue { 
-    background-color: #e3f2fd; 
+.bg-light-green { 
+    background-color: #f0fdf4; 
     color: var(--text-dark); 
-    background-image: linear-gradient(rgba(227, 242, 253, 0.9), rgba(227, 242, 253, 0.9)), url('assets/bg_light_blue.png');
+    background-image: linear-gradient(rgba(240, 253, 244, 0.9), rgba(240, 253, 244, 0.9)), url('assets/bg_light_green.png');
     background-size: cover;
     background-position: center;
 }
-.bg-light-blue .text-muted { color: var(--text-muted-dark); }
-.bg-light-blue .border-element { border-color: var(--border-dark); }
+.bg-light-green .text-muted { color: var(--text-muted-dark); }
+.bg-light-green .border-element { border-color: var(--border-dark); }
 
 .bg-dark-green { background-color: var(--bg-dark-green); color: var(--text-light); }
 .bg-dark-green .text-muted { color: var(--text-muted-light); }
