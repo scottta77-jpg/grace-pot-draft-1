@@ -366,26 +366,25 @@ nav {
 }
 
 .review-card { 
-    background: rgba(255, 255, 255, 0.03); 
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08); 
+    background: rgba(128, 128, 128, 0.05); 
+    border: 1px solid rgba(128, 128, 128, 0.1); 
     border-radius: 32px; 
     padding: 60px;
     transition: var(--transition);
 }
 .review-card:hover {
-    border-color: rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary-red);
+    background: rgba(128, 128, 128, 0.08);
 }
-.review-stars { color: #82c91e; display: flex; gap: 8px; margin-bottom: 30px; }
+.review-stars { color: #5c940d; display: flex; gap: 8px; margin-bottom: 30px; }
 .review-card p { 
     font-size: 1.6rem; 
     line-height: 1.5; 
     margin-bottom: 40px; 
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
 }
-.review-author { font-size: 1rem; color: #ffffff; }
+.review-author { font-size: 1rem; color: var(--text-dark); }
 .review-author span { display: block; opacity: 0.6; font-size: 0.85rem; margin-top: 4px; }
 
 /* Footer Section */
