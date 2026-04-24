@@ -143,19 +143,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 60px;
+    padding: 20px 60px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
-    background: rgba(26, 80, 50, 0.98); /* Deep Caribbean Green */
-    backdrop-filter: blur(15px);
-    border-bottom: 3px solid #fed100; /* Jamaican Gold Border */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    background: transparent;
+    transition: background 0.3s ease;
 }
 .nav-links { display: flex; gap: 40px; }
 .nav-links a { 
-    color: #ffffff; 
+    color: #1a5032; 
     text-decoration: none; 
     font-size: 1rem; 
     font-weight: 700;
@@ -177,8 +175,8 @@ nav {
 .nav-links a:hover { color: #fed100; }
 .nav-links a:hover::after { width: 100%; }
 .nav-right { display: flex; align-items: center; gap: 15px; }
-.cart-btn { background: rgba(255,255,255,0.1); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; color: white; text-decoration: none; transition: var(--transition); }
-.cart-btn:hover { background: rgba(255,255,255,0.2); }
+.cart-btn { background: rgba(128, 128, 128, 0.1); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; position: relative; color: #1a5032; text-decoration: none; transition: var(--transition); }
+.cart-btn:hover { background: rgba(128, 128, 128, 0.2); }
 .cart-badge { position: absolute; top: -5px; right: -5px; background: var(--bg-yellow); color: var(--bg-dark-green); font-size: 0.7rem; font-weight: bold; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
 /* Hero Section */
