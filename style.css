@@ -143,15 +143,73 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-/* Menu Grid */
-.menu-header { text-align: center; margin-bottom: 50px; }
+/* Menu Categories */
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+.category-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.category-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.category-btn:hover:not(.active) {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Text Menu Grid */
+.menu-header { text-align: center; margin-bottom: 40px; }
 .menu-header h2 { font-size: 3rem; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-.menu-card { background: transparent; border-radius: 12px; transition: var(--transition); }
-.menu-card-img { width: 100%; height: 300px; border-radius: 16px; object-fit: cover; border: 1px solid var(--border-color); margin-bottom: 15px; }
-.menu-card-info { display: flex; justify-content: space-between; align-items: center; }
-.menu-card-title { font-size: 1.1rem; font-weight: 700; }
-.menu-card-price { font-size: 0.85rem; color: var(--text-muted); }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+.menu-item-text {
+    padding: 25px;
+    border-radius: 16px;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+.menu-item-text:hover {
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+.menu-item-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.menu-item-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.menu-item-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
 
 /* Vibe Section */
 .vibe-section { padding: 100px 0; }
