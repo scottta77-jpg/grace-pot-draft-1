@@ -39,4 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.padding = '1rem 0';
         }
     });
+    // Testimonial Carousel
+    const carousel = document.querySelector('.testimonial-carousel');
+    if (carousel) {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
 });
