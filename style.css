@@ -85,7 +85,7 @@ body {
 .bg-light-green { 
     background-color: #f0fdf4; 
     color: var(--text-dark); 
-    background-image: linear-gradient(rgba(240, 253, 244, 0.9), rgba(240, 253, 244, 0.9)), url('assets/bg_light_green.png');
+    background-image: linear-gradient(rgba(240, 253, 244, 0.85), rgba(240, 253, 244, 0.85)), url('assets/bg_dense_tropical.png');
     background-size: cover;
     background-position: center;
 }
