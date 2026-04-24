@@ -25,10 +25,18 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-yellow);
+    background-color: var(--bg-cream);
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+/* Safety rule to prevent phantom sections */
+.section:nth-child(n+7) {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
 }
 
 /* Section Background Utilities */

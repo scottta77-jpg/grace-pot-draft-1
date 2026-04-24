@@ -489,7 +489,12 @@
                 navigationPosition: 'right',
                 anchors: ['home', 'story', 'menu', 'vibe', 'feedback', 'contact'],
                 menu: '.nav-links',
-                sectionSelector: '.section'
+                sectionSelector: '.section',
+                loopBottom: false,
+                loopTop: false,
+                continuousVertical: false,
+                animateAnchor: true,
+                recordHistory: true
             });
 
             // Menu filtering logic
