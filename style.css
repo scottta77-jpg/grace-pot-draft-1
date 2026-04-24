@@ -233,7 +233,7 @@ nav {
 
 /* Belief Section */
 .belief { text-align: center; padding: 150px 0; position: relative; }
-.belief-plates { display: flex; justify-content: center; gap: 30px; margin-bottom: 60px; }
+.belief-plates { display: flex; justify-content: center; gap: 30px; margin-bottom: 60px; padding: 40px 0; }
 .belief-plates img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 2px solid rgba(255,255,255,0.05); }
 .belief-plates img:nth-child(2) { transform: translateY(-20px) scale(1.1); z-index: 2; }
 .belief h2 {
