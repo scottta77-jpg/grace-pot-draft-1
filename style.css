@@ -181,6 +181,31 @@ nav {
 .review-author { font-size: 0.9rem; }
 .review-author span { display: block; color: var(--text-muted); font-size: 0.8rem; margin-top: 5px; }
 
+/* Footer Section */
+footer { position: relative; overflow: hidden; margin-top: 100px; }
+.footer-top { padding: 100px 0 150px; position: relative; }
+.footer-grid { display: flex; justify-content: space-between; position: relative; z-index: 2; }
+.footer-left { max-width: 300px; }
+.footer-left h2 { font-size: 2.5rem; margin-bottom: 20px; }
+.footer-left p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 30px; }
+.social-icons { display: flex; gap: 15px; }
+.social-icons a { color: var(--text-muted); transition: var(--transition); }
+.social-icons a:hover { color: var(--primary-color); }
+.footer-right { text-align: right; }
+.footer-right h3 { font-size: 1.2rem; margin-bottom: 20px; }
+.footer-right ul { list-style: none; }
+.footer-right ul li { margin-bottom: 12px; }
+.footer-right ul a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
+.footer-right ul a:hover { color: white; }
+
+.footer-plate { position: absolute; bottom: -100px; left: 50%; transform: translateX(-50%); width: 500px; height: 500px; border-radius: 50%; object-fit: cover; z-index: 1; border: 1px solid rgba(255,255,255,0.1); }
+
+.footer-bottom { background: #000; padding: 25px 0; border-top: 1px solid var(--border-color); position: relative; z-index: 2; }
+.footer-bottom-inner { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.8rem; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom a { color: var(--text-muted); text-decoration: none; transition: var(--transition); }
+.footer-bottom a:hover { color: white; }
+
 /* Responsive */
 @media (max-width: 992px) {
     .grid-3 { grid-template-columns: 1fr 1fr; }
